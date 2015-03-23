@@ -39,8 +39,6 @@ class Book extends Controller
         $secondBook->setTitle('A Second Tale of Two Cities');
         $bookCollection[] = $secondBook;
 
-
-
         //doe hier wat zotte dingen
         return new ViewModel(array('books'=>$bookCollection,'params' => $this->getRequest()->getParams()));
     }
