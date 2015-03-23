@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>About me</h2>
+    <!--<img width="1024" src="/img/kaspercools.jpg" alt="Kasper Cools"/>-->
+    <div class="tab-pane active" id="about">
+        <img src="/img/kaspercools.jpg" name="aboutme" width="140" height="140" border="0" class="img-circle">
+          <h3 class="media-heading"><?=$model->getFirstName()?> <?=$model->getLastName()?><small> <?=$model->getCountry()?></small></h3>
+                    <span><strong>Skills: </strong></span>
+
+                    <?php foreach($model->getSkills() as $individualSkill): ?>
+                        <?php switch($individualSkill->getLevel()):
+                             case 1:?>
+                                <span class="label label-success"><?=$individualSkill->getName()?></span>
+                             <?php break;?>
+                             <?php case 2:?>
+                                 <span class="label label-warning"><?=$individualSkill->getName()?></span>
+                             <?php break;?>
+                             <?php default:?>
+                                <span class="label label-danger"><?=$individualSkill->getName()?></span>
+                             <?php break;?>
+                        <?php endswitch;?>
+                   <?php endforeach;?>
+
+        <hr>
+        <center>
+            <p class="text-left"><strong>Bio: </strong><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut sem dui, tempor sit amet commodo a, vulputate vel tellus.</p>
+             <br>
+        </center>
+    </div>
+</div>

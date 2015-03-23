@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "psr-0": {
+            "controller": "app",
+            "model": "app",
+            "view": "app"
+        },
+        "psr-4": {
+            "Todum\\": "library/Todum"
+        },
+        "classmap": ["app"]
+
+    }
+}

@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Book overview</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ISBN</th>
+                <th>Title</th>
+                <th>Edition</th>
+                <th>Year</th>
+                <th>Writers</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach($books as $book):?>
+                <tr>
+                    <td><?=$book->getISBN()?></td>
+                    <td><?=$book->getTitle()?></td>
+                    <td><?=$book->getEdition()?></td>
+                    <td><?=$book->getYear()?></td>
+                    <td>
+                        <ul>
+                            <?php foreach($book->getAuthors() as $author):?>
+                                <li><?=$author->getFirstName()?> <?=$author->getLastName()?></li>
+                            <?php endforeach;?>
+                        </ul>
+                    </td>
+                </tr>
+            <?php endforeach;?>
+        </tbody>
+    </table>
+</div>

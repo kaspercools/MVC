@@ -1,0 +1,25 @@
+{
+  "name": "StudyxMVC",
+  "version": "0.0.1",
+  "authors": [
+    "Kasper Cools <kasper@todum.be>"
+  ],
+  "description": "studyx example",
+  "keywords": [
+    "php",
+    "mvc",
+    "design-patterns"
+  ],
+  "license": "MIT",
+  "homepage": "http://todum.be",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}
