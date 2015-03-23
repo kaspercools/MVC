@@ -8,6 +8,7 @@
                 <th>Edition</th>
                 <th>Year</th>
                 <th>Writers</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -24,8 +25,15 @@
                             <?php endforeach;?>
                         </ul>
                     </td>
-                </tr>
+                    <td>
+                        <a href="/book/edit/isbn/<?=$book->getISBN()?>" class="btn btn-primary btn-xs">Edit</a>
+                        <a href="/book/delete/isbn/<?=$book->getISBN()?>"  class="btn btn-danger btn-xs">Delete</a>
+                    </td>
+               </tr>
             <?php endforeach;?>
         </tbody>
+        <tfoot>
+            <a href="/book/new" class="btn btn-success">Add new</a>
+        </tfoot>
     </table>
 </div>

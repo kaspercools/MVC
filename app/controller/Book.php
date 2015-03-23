@@ -45,6 +45,7 @@ class Book extends Controller
 
     public function editAction()
     {
+
         return new ViewModel(array('params' => $this->getRequest()->getParams()));
     }
 
@@ -57,7 +58,7 @@ class Book extends Controller
     {
         Registery::getInstance()->application->disableViewRenderer();
 
-        echo json_encode(['msg' => 'We deleted entity with id: ' . $this->getRequest()->getParams()['id']]);
+        echo json_encode(['msg' => 'We deleted entity with id: ' . $this->getRequest()->getParams()['isbn']]);
 
     }
 }
